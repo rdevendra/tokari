@@ -29,17 +29,17 @@ Getting Started
 
 * Setup Database User
 
-    Create a PostgreSQL user with this command
+Create a PostgreSQL user with this command
 ```shell
     sudo -u postgres createuser -s tokri_user
 ```
 
-    Set the password for database user, enter the PostgreSQL console with this command:
+Set the password for database user, enter the PostgreSQL console with this command:
 ```shell    
     sudo -u postgres psql
 ```
 
-    At the PostgreSQL prompt, enter this command to set the password for the database user that you created:
+At the PostgreSQL prompt, enter this command to set the password for the database user that you created:
 ```shell
     postgres=# \password pguser
 ```
@@ -47,7 +47,7 @@ Getting Started
     
 * Setup Database 
 
-    create config/database.yml. Once configured, your database.yml should contain something like this:
+Create config/database.yml. Once configured, your database.yml should contain something like this:
 ```shell
     development:
         adapter: postgresql
@@ -66,7 +66,6 @@ Getting Started
         password: tokri_password
 ```
 
-
 ```shell
     bundle exec rake db:create
     bundle exec rake db:migrate
@@ -74,6 +73,6 @@ Getting Started
     bundle exec rake spree_sample:load
 ```    
 
-* run rails s
+* Start rails server
 
 * ...
