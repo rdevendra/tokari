@@ -25,9 +25,48 @@ Getting Started
 
 * git clone https://github.com/rdevendra/tokri.git <your_local_folder_name> 
 
-* run bundle install
+* bundle install
 
-* Setup Database by creating config/database.yml
+* Setup Database User
+
+    Create a PostgreSQL user with this command
+```shell
+    sudo -u postgres createuser -s tokri_user
+```
+
+    Set the password for database user, enter the PostgreSQL console with this command:
+```shell    
+    sudo -u postgres psql
+```
+
+    At the PostgreSQL prompt, enter this command to set the password for the database user that you created:
+```shell
+    postgres=# \password pguser
+```
+ 
+    
+* Setup Database 
+
+    create config/database.yml. Once configured, your database.yml should contain something like this:
+```shell
+    development:
+        adapter: postgresql
+        encoding: unicode
+        database: tokri_development
+        pool: 5
+        username: tokri_user
+        password: tokri_password
+
+    test:
+        adapter: postgresql
+        encoding: unicode
+        database: tokri_test
+        pool: 5
+        username: tokri_user
+        password: tokri_password
+```
+
+
 ```shell
     bundle exec rake db:create
     bundle exec rake db:migrate
