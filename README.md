@@ -16,8 +16,10 @@ Getting Started
 * Install Image Magick ( http://www.imagemagick.org/script/index.php )
 
 * Install PostgreSQL
+```shell
     sudo apt-get update
     sudo apt-get install postgresql postgresql-contrib libpq-dev
+```
 
 ### Application Setup
 
