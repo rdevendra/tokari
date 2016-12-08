@@ -1,24 +1,38 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Getting Started
+------------------
 
-Things you may want to cover:
+### System Setup
 
-* Ruby version
+* Install RVM and create a gemeset for project
 
-* System dependencies
+* Install Ruby version >=2.2.2
 
-* Configuration
+* Install Rails version 5.0.0
 
-* Database creation
+* Install bundler
 
-* Database initialization
+* Install Image Magick ( http://www.imagemagick.org/script/index.php )
 
-* How to run the test suite
+* Install PostgreSQL
+    sudo apt-get update
+    sudo apt-get install postgresql postgresql-contrib libpq-dev
 
-* Services (job queues, cache servers, search engines, etc.)
+### Application Setup
 
-* Deployment instructions
+* git clone https://github.com/rdevendra/tokri.git <your_local_folder_name> 
+
+* run bundle install
+
+* Setup Database by creating config/database.yml
+```shell
+    bundle exec rake db:create
+    bundle exec rake db:migrate
+    bundle exec rake db:seed
+    bundle exec rake spree_sample:load
+```    
+
+* run rails s
 
 * ...
