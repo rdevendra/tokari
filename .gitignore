@@ -35,6 +35,11 @@
 public/dispatch.cgi
 public/dispatch.fcgi
 public/dispatch.rb
+public/assets
+public/attachments
+public/blank_iframe.html
+public/ckeditora
+public/spree
 httpd
 pgsql
 config/*-public.asc
