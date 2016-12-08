@@ -41,7 +41,7 @@ Set the password for database user, enter the PostgreSQL console with this comma
 
 At the PostgreSQL prompt, enter this command to set the password for the database user that you created:
 ```shell
-    postgres=# \password pguser
+    postgres=# \password tokri_user
 ```
  
     
