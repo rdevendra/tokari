@@ -43,6 +43,5 @@ public/spree
 httpd
 pgsql
 config/*-public.asc
-config/database.yml
 config/mongrel_cluster.yml
 

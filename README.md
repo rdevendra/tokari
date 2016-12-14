@@ -45,27 +45,7 @@ At the PostgreSQL prompt, enter this command to set the password for the databas
 ```
  
     
-* Setup Database 
-
-Create config/database.yml. Once configured, your database.yml should contain something like this:
-```shell
-    development:
-        adapter: postgresql
-        encoding: unicode
-        database: tokri_development
-        pool: 5
-        username: tokri_user
-        password: tokri_password
-
-    test:
-        adapter: postgresql
-        encoding: unicode
-        database: tokri_test
-        pool: 5
-        username: tokri_user
-        password: tokri_password
-```
-
+* Setup Database
 ```shell
     bundle exec rake db:create
     bundle exec rake db:migrate
