@@ -84,6 +84,7 @@ test:
 #
 production:
   <<: *default
-  database: toy_tokri_production
-  username: toy_tokri
+  host: <%= ENV['TOY_TOKRI_DATABASE_HOST'] %>
+  database: <%= ENV['TOY_TOKRI_DATABASE'] %>
+  username: <%= ENV['TOY_TOKRI_DATABASE_USER'] %>
   password: <%= ENV['TOY_TOKRI_DATABASE_PASSWORD'] %>
