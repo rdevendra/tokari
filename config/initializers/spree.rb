@@ -17,15 +17,15 @@ Spree.config do |config|
   if Rails.env.production?
     attachment_config = {
         s3_credentials: {
-          access_key_id:     'AKIAIXNYHWMYYLBZWYUQ',
-          secret_access_key: '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',
-          bucket:            "toytokri.products"
+          access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
+          secret_access_key:  ENV['AWS_SECRET_ACCESS_KEY'],
+          bucket:            ENV["S3_BUCKET_NAME"]
         },
 
         storage:        :s3,
         s3_headers:     { "Cache-Control" => "max-age=31557600" },
         s3_protocol:    "https",
-        bucket:         "toytokri.products",
+        bucket:         ENV["S3_BUCKET_NAME"],
         #s3_host_name:   'ec2.ap-south-1.amazonaws.com',
         url:            's3.amazonaws.com',
 
