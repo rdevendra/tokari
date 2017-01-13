@@ -1,24 +1,29 @@
 //Add your custom bootstrap variables here, see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss for full list of variables.
 
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css) ;
 @import "bootstrap-sprockets";
 @import "variables";
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+@import "header";
+@import "footer";
 
 body {
   font-family: 'Bree Serif', serif;
   font-size: 16px;
+
 }
 
 // -- Spree Custom Header and Footer ---------------------
+
 #spree-header {
   background-color: $brand-primary;
-  margin-bottom: $line-height-computed;
+  margin-bottom: 120px;
 
   #header {
     background: rgba($gray-lighter, 0.3);
-    padding: $line-height-computed 0;
-    max-height: 100px;
+
+    max-height: 40px;
   }
 
   #logo {
@@ -26,12 +31,12 @@ body {
 
     img {
       max-width: 100%;
-      max-height: 70px;
+      max-height: 60px;
     }
   }
 
   .nav a {
-    color: white;
+    color: $header-link-color;
 
     &:hover, &:focus {
       background: rgba($gray-darker, 0.4);
@@ -42,13 +47,6 @@ body {
     border: 0;
     margin-bottom: 0;
   }
-}
-
-#spree-footer {
-  background: $gray-dark;
-  padding-top: $padding-base-horizontal;
-  margin-top: $line-height-computed;
-  color: white;
 }
 
 // -- Spree Layout Custom Rules -------------------------
@@ -90,6 +88,24 @@ table {
   }
 }
 
+// Updated credit-card image
+#credit-card-image {
+  margin-top: -10px;
+}
+
+.existing-credit-card-list td {
+  padding: 5px;
+}
+
+
+#spree-footer {
+  background: $gray-dark;
+  padding-top: $padding-base-horizontal;
+  margin-top: $line-height-computed;
+  color: white;
+}
+
+
 // Footer links
 #footer-left a {
   color: lighten($brand-primary, 20);
@@ -99,11 +115,10 @@ table {
   }
 }
 
-// Updated credit-card image
-#credit-card-image {
-  margin-top: -10px;
+.table-striped > tbody > tr.even{
+  background-color: $footer-color-primary;
 }
 
-.existing-credit-card-list td {
-  padding: 5px;
+.price, .taxonomy-root, .product-title, .product-section-title, .taxon-title{
+  color: $heading-color;
 }

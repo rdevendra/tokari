@@ -1,5 +1,35 @@
 /*--------------------------------
   Colors
 --------------------------------*/
-$brand-primary:   #16a79d;
-$text-color: #d9534f;
+
+/* Color Scheme Link
+http://www.colorcombos.com/combotester.html?color0=ff0000&color1=ff9900&color2=e7e7c4&color3=CCCC9A&show_text=' title='A web color combinations tool and library for web designers.
+*/
+
+$header-color: #FF9900;
+$footer-color-primary: #e7e7c4;
+$footer-color-secondary: #CCCC9A;
+$heading-color: #ff0000;
+$text-color: #000000;
+$header-link-color: #ffffff;
+
+
+$brand-primary:   $header-color;
+$link-color: $text-color;
+
+
+$panel-footer-bg: $footer-color-primary;
+$panel-inner-border: $footer-color-primary;
+$panel-default-border: $footer-color-primary;
+
+$breadcrumb-bg: $footer-color-secondary;
+$breadcrumb-color: $footer-color-primary;
+$breadcrumb-separator: ">";
+
+$btn-success-bg: $footer-color-secondary;
+
+$well-bg: $footer-color-primary;
+
+$list-group-hover-bg: $footer-color-primary;
+$list-group-link-color: $text-color;
+$list-group-border: $footer-color-primary;
