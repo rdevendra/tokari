@@ -1,32 +1,17 @@
 
 <div id="spree-header">
-!--Navbar-->
+<!--Navbar-->
 <nav class="navbar navbar-fixed-top scrolling-navbar navbar-dark bg-primary">
 
   <div class="container">
     <div class="row row1">
       <ul class="largenav pull-right">
-        <li class="upper-links"><a class="links" href="">Link 1</a></li>
-        <li class="upper-links"><a class="links" href="">Link 2</a></li>
-        <li class="upper-links"><a class="links" href="">Link 3</a></li>
-        <li class="upper-links"><a class="links" href="">Link 4</a></li>
-        <li class="upper-links"><a class="links" href="">Link 5</a></li>
-        <li class="upper-links"><a class="links" href="">Link 6</a></li>
+        <li class="upper-links"><%= link_to Spree.t(:home), spree.root_path %></li>
+        <%= render partial: 'shared/login_bar' %>
         <li class="upper-links">
           <a class="links" href="">
             <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
           </a>
-        </li>
-        <li class="upper-links dropdown"><a class="links" href="">Dropdown</a>
-          <ul class="dropdown-menu">
-            <li class="profile-li"><a class="profile-links" href="">Link</a></li>
-            <li class="profile-li"><a class="profile-links" href="">Link</a></li>
-            <li class="profile-li"><a class="profile-links" href="">Link</a></li>
-            <li class="profile-li"><a class="profile-links" href="">Link</a></li>
-            <li class="profile-li"><a class="profile-links" href="">Link</a></li>
-            <li class="profile-li"><a class="profile-links" href="">Link</a></li>
-            <li class="profile-li"><a class="profile-links" href="">Link</a></li>
-          </ul>
         </li>
       </ul>
     </div>
@@ -34,24 +19,28 @@
     <div class="row row2">
         <!--Navbar Brand-->
         <div class="col-sm-2">
-            <h1 style="margin:0px;"><span class="largenav">Toy Tokri</span></h1>
+            <figure id="logo" data-hook>
+                <%= logo %>
+            </figure>
+            <!--<h1 style="margin:0px;"><span class="largenav">Toy Tokri</span></h1> -->
         </div>
         <div class="tokri-navbar-search smallsearch col-sm-8 col-xs-11">
-          <div class="row">
-            <input class="tokri-navbar-input col-xs-11" type="" placeholder="Search for products & brands" name="">
-            <button class="tokri-navbar-button col-xs-1">
-              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-            </button>
-          </div>
+            <div class="row">
+                <%= render partial: 'shared/search' %>
+            </div>
         </div>
         <div class="cart largenav col-sm-2">
-          <a class="cart-button">
-            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart
-            <span class="item-number ">0</span>
-          </a>
+          <span class="nav navbar-nav cart-button" data-hook>
+            <span id="link-to-cart" data-hook>
+              <noscript>
+                <%= link_to Spree.t(:cart), '/cart' %>
+              </noscript>
+              &nbsp;
+            </span>
+            <script>Spree.fetch_cart()</script>
+          </span>
         </div>
     </div>
-
   </div>
  </nav>
 <!--/.Navbar-->

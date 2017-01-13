@@ -9,9 +9,6 @@
   padding-top: 10px;
 }
 
-.row2 {
-  padding-bottom: 20px;
-}
 
 .tokri-navbar-input {
   color: $brand-primary;
@@ -24,11 +21,12 @@
 
 .tokri-navbar-button {
   background-color: #CCCC9A;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23), inset 1px 1px 0 0 rgba(255, 255, 255, 0.2);
   border: 1px solid #CCCC9A;
   border-radius: 0 2px 2px 0;
   color: #ffffff;
   padding: 10px 0;
-  height: 43px;
+  height: 44px;
   cursor: pointer;
 }
 
@@ -37,10 +35,10 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .23), inset 1px 1px 0 0 hsla(0, 0%, 100%, .2);
   padding: 10px 0;
   text-align: center;
-  height: 41px;
+  height: 44px;
   border-radius: 2px;
   font-weight: 500;
-  width: 120px;
+  width: 180px;
   display: inline-block;
   color: #FFFFFF;
   text-decoration: none;

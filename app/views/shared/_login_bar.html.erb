@@ -1,0 +1,9 @@
+<% if spree_current_user %>
+    <li class="upper-links dropdown"><a class="links" href=""><%= spree_current_user.email %></a>
+      <ul class="dropdown-menu">
+        <li class="upper-links"><%= link_to Spree.t(:my_account), spree.account_path %></li>
+        <li class="upper-links"><%= link_to Spree.t(:logout), spree.logout_path %></li>
+      </ul>
+<% else %>
+    <li class="upper-links" id="link-to-login"><%= link_to Spree.t(:login), spree.login_path %></li>
+<% end %>

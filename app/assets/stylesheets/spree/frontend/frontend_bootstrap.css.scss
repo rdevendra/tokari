@@ -18,7 +18,7 @@ body {
 
 #spree-header {
   background-color: $brand-primary;
-  margin-bottom: 120px;
+  margin-bottom: 150px;
 
   #header {
     background: rgba($gray-lighter, 0.3);
@@ -119,6 +119,6 @@ table {
   background-color: $footer-color-primary;
 }
 
-.price, .taxonomy-root, .product-title, .product-section-title, .taxon-title{
+.price, .taxonomy-root, .product-title, .product-section-title, .taxon-title, .search-results-title{
   color: $heading-color;
 }
