@@ -44,4 +44,4 @@ httpd
 pgsql
 config/*-public.asc
 config/mongrel_cluster.yml
-
+config/local_env.yml
