@@ -92,11 +92,12 @@
 }
 
 .dropdown:hover {
-  background-color: #fff;
+  background-color: #A9A9A9;
+  color: #A9A9A9;
 }
 
 .dropdown:hover .links {
-  color: #000;
+  color: #ffffff;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -107,7 +108,7 @@
   position: absolute;
   top: 100%;
   display: none;
-  background-color: #fff;
+  background-color: #A9A9A9;
   color: #333;
   left: 0px;
   border: 0;

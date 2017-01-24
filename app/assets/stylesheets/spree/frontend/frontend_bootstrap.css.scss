@@ -1,6 +1,6 @@
 //Add your custom bootstrap variables here, see https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss for full list of variables.
 
-@import url(//fonts.googleapis.com/css?family=Bree+Serif);
+@import url(//fonts.googleapis.com/css?family=Ubuntu);
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css) ;
 @import "bootstrap-sprockets";
 @import "variables";
@@ -9,20 +9,18 @@
 @import "footer";
 
 body {
-  font-family: 'Bree Serif', serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
-
 }
-
 // -- Spree Custom Header and Footer ---------------------
 
 #spree-header {
   background-color: $brand-primary;
-  margin-bottom: 150px;
+  margin-bottom: 30px;
+  height: 100px;
 
   #header {
     background: rgba($gray-lighter, 0.3);
-
     max-height: 40px;
   }
 
@@ -119,6 +117,18 @@ table {
   background-color: $footer-color-primary;
 }
 
-.price, .taxonomy-root, .product-title, .product-section-title, .taxon-title, .search-results-title{
-  color: $heading-color;
+h1, h2, h3, h4, .price, .qty, .order-qty, .total{
+  color:  $heading-color;
 }
+
+#cart-detail th, #line-items th, {
+  background: $footer-color-secondary !important;
+}
+
+.stock-contents th{
+  background: $footer-color-secondary !important;
+}
+.cart-total  {
+  background: $footer-color-primary !important;
+}
+
