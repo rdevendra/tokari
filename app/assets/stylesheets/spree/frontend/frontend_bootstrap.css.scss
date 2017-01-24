@@ -132,3 +132,28 @@ h1, h2, h3, h4, .price, .qty, .order-qty, .total{
   background: $footer-color-primary !important;
 }
 
+#page-not-found{
+  //height: 600px;
+  background: $footer-color-primary;
+  margin-top: -50px;
+  //margin-bottom: 30px;
+  //box-shadow: 0px 30px 15px #888888;
+}
+
+#error-image{
+  height: 500px;
+  width: 800px;
+  display: block;
+  margin: auto;
+}
+
+#page-not-found-link{
+  position: relative;
+  top:  150px;
+  left: 450px;
+
+  a{
+    text-decoration: underline;
+  }
+}
+
