@@ -132,28 +132,88 @@ h1, h2, h3, h4, .price, .qty, .order-qty, .total{
   background: $footer-color-primary !important;
 }
 
-#page-not-found{
-  //height: 600px;
+#error-content{
   background: $footer-color-primary;
-  margin-top: -50px;
-  //margin-bottom: 30px;
-  //box-shadow: 0px 30px 15px #888888;
-}
+  margin-top: -20px;
+  overflow-x: hidden;
 
-#error-image{
-  height: 500px;
-  width: 800px;
-  display: block;
-  margin: auto;
-}
 
-#page-not-found-link{
-  position: relative;
-  top:  150px;
-  left: 450px;
+  #error-image{
+    height: 500px;
+    width: 700px;
+    display: block;
+    margin: auto;
 
-  a{
-    text-decoration: underline;
+   }
+
+  #error-message-422{
+    position: relative;
+    top:  -455px;
+    left: 470px;
+    h2{
+      color: #000000;
+    }
+  }
+
+  #link-422-line1{
+    position: relative;
+    top:  -460px;
+    left: 495px;
+  }
+
+
+  #link-422-line2{
+    position: relative;
+    top:  -435px;
+    left: 60px;
+    a{
+      text-decoration: underline;
+    }
+  }
+
+  #error-message-500{
+    position: relative;
+    top:  -455px;
+    left: 470px;
+    h2{
+      color: #000000;
+    }
+  }
+
+  #link-500-line1{
+    position: relative;
+    top:  -460px;
+    left: 400px;
+  }
+
+
+  #link-500-line2{
+      position: relative;
+      top:  -435px;
+      left: -100px;
+      a{
+        text-decoration: underline;
+      }
+    }
+
+  #error-message-404{
+    position: relative;
+    top:  -450px;
+    left: 400px;
+    h2{
+      color: #000000;
+    }
+  }
+
+  #link-404{
+    position: relative;
+    top:  -450px;
+    left: 470px;
+
+    a{
+      text-decoration: underline;
+    }
   }
 }
+
 

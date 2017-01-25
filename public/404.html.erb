@@ -1,58 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>he page you were looking for doesn't exist (404)</title>
-  <%= csrf_meta_tags %>
-
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
+<head data-hook="inside_head">
+  <%= render partial: 'spree/shared/head' %>
 </head>
+<body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
+    <%= render partial: 'spree/shared/google_analytics.js' %>
+    <%= render partial: 'shared/custom_header' %>
 
-<body>
-    <div id="spree-header">
-      <!--Navbar-->
-      <nav class="navbar navbar-fixed-top scrolling-navbar navbar-dark bg-primary">
+    <div id="error-content">
+        <div class="row" data-hook>
+          <!-- This file lives in public/404.html -->
+              <img id="error-image" src="/image/error.png" alt="The page you were looking for doesn't exist">
+          <span id="error-message-404"><h2>The page you're trying to reach doesn't exist.</h2></span>
+          <span id="link-404">Go back to <%= link_to "toytokri.com", spree.root_path %> or <%= link_to "contact us", spree.root_path %> about the problem.</span>
 
-        <div class="container">
-          <div class="row row1">
-            <ul class="largenav pull-right">
-              <li class="upper-links"><%= link_to Spree.t(:home), spree.root_path,  :class=>'links' %></li>
-              <%= render partial: 'shared/login_bar' %>
-              <li class="upper-links">
-                <a class="links" href="">
-                  <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="row row2">
-            <!--Navbar Brand-->
-            <div class="col-sm-2">
-              <figure id="logo" data-hook>
-                <%= logo %>
-              </figure>
-              <!--<h1 style="margin:0px;"><span class="largenav">Toy Tokri</span></h1> -->
-            </div>
-            <div class="tokri-navbar-search smallsearch col-sm-8 col-xs-11">
-              <div class="row">
-                <%= render partial: 'shared/search' %>
-              </div>
-            </div>
-          </div>
         </div>
-      </nav>
-      <!--/.Navbar-->
     </div>
-
-
-  <!-- This file lives in public/404.html -->
-  <div id="page-not-found">
-    <span id="page-not-found-link">Go back to <%= link_to "toytokri.com", spree.root_path %> or <%= link_to "contact us", spree.root_path %> about the problem.</span>
-    <figure>
-      <img id="error-image" src="/image/error_404.png" alt="The page you were looking for doesn't exist">
-    </figure>
-  </div>
 </body>
-<%#= render partial: "shared/footer" %>
 </html>
+
+
+
+
+
+
+
+

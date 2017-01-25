@@ -1,0 +1,33 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
+<head data-hook="inside_head">
+    <%= render partial: 'spree/shared/head' %>
+</head>
+<body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
+<%= render partial: 'spree/shared/google_analytics.js' %>
+<%= render partial: 'shared/custom_header' %>
+
+<div id="error-content">
+  <div class="row" data-hook>
+    <!-- This file lives in public/500.html -->
+    <img id="error-image" src="/image/error.png" alt="Sorry, you encountered an error">
+    <span id="error-message-500"><h2>Sorry, you encountered an error</h2></span>
+    <span id="link-500-line1">We have been notified of the details of this error and will be working to fix it soon.</span>
+    <span id="link-500-line2">Go back to <%= link_to "toytokri.com", spree.root_path %> or <%= link_to "contact us", spree.root_path %> about the problem.</span>
+
+  </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
