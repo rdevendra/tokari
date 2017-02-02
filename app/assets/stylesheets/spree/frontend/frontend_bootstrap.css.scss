@@ -13,6 +13,10 @@ body {
   font-size: 16px;
 }
 // -- Spree Custom Header and Footer ---------------------
+#content{
+  min-height: 700px;
+}
+
 
 #spree-header {
   background-color: $brand-primary;
