@@ -4,36 +4,40 @@
       <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
         <h3> Toy Tokri </h3>
         <ul>
-          <li> <a href="#"> About Us </a> </li>
-          <li> <a href="#"> Contact Us </a> </li>
-          <li> <a href="#"> Career </a> </li>
-          <li> <a href="#"> Press </a> </li>
+          <li> <a href="/about"> About Us </a> </li>
+          <li> <a href="/contact"> Contact Us </a> </li>
+          <!--<li> <a href="/career"> Career </a> </li>
+          <li> <a href="/press"> Media </a> </li>-->
         </ul>
       </div>
       <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
         <h3> FAQ's </h3>
         <ul>
-          <li> <a href="#"> Payments </a> </li>
-          <li> <a href="#"> Shipping </a> </li>
-          <li> <a href="#"> Orders </a> </li>
-          <li> <a href="#"> Cancellation </a> </li>
+          <li> <a href="/faq"> Payments </a> </li>
+          <li> <a href="/faq"> Shipping </a> </li>
+          <li> <a href="/faq"> Orders </a> </li>
+          <li> <a href="/faq"> Cancellation </a> </li>
         </ul>
       </div>
       <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
         <h3> Policy </h3>
         <ul>
-          <li> <a href="#"> Privacy Policy </a> </li>
-          <li> <a href="#"> Shipping and Return </a> </li>
-          <li> <a href="#"> Terms and Conditions </a> </li>
+          <li> <a href="/privacy_policy"> Privacy Policy </a> </li>
+          <li> <a href="/shipping_and_return_policy"> Shipping and Return </a> </li>
+          <li> <a href="/terms_and_conditions"> Terms and Conditions </a> </li>
         </ul>
       </div>
       <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
         <h3> My Account </h3>
         <ul>
-          <li> <a href="#"> Track Orders </a> </li>
-          <li> <a href="#"> Bulk Orders </a> </li>
-          <li> <a href="#"> Wishlist </a> </li>
-          <li> <a href="#"> Giftcards </a> </li>
+          <% if spree_current_user %>
+              <li> <a href="#"> Track Orders </a> </li>
+              <li> <a href="#"> Bulk Orders </a> </li>
+              <li> <a href="#"> Wishlist </a> </li>
+              <li> <a href="#"> Giftcards </a> </li>
+          <% else %>
+              <li><%= link_to Spree.t(:login), spree.login_path %></li>
+          <% end %>
         </ul>
       </div>
       <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
