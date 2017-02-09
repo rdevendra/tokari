@@ -50,4 +50,10 @@ SitemapGenerator::Sitemap.create do
   add_password_reset
   add_taxons
   add_products
+  add '/about', :changefreq => 'weekly', :priority => 0.5
+  add '/contact', :changefreq => 'weekly', :priority => 0.5
+  add '/faq', :changefreq => 'weekly', :priority => 0.5
+  add '/privacy_policy', :changefreq => 'weekly', :priority => 0.5
+  add '/shipping_and_return_policy', :changefreq => 'weekly', :priority => 0.5
+  add '/terms_and_conditions', :changefreq => 'weekly', :priority => 0.5
 end
