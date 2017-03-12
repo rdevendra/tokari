@@ -11,3 +11,11 @@ Deface::Override.new(virtual_path: 'spree/layouts/spree_application',
     insert_after: 'body',
     text: '  <footer>  <%= render partial: "shared/footer" %>   </footer>'
 )
+
+#add banner on index page
+Deface::Override.new(virtual_path: 'spree/layouts/spree_application',
+    name: 'add_banner',
+    insert_before: 'div.container',
+    partial: 'shared/banner'
+)
+

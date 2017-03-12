@@ -220,4 +220,17 @@ h1, h2, h3, h4, .price, .qty, .order-qty, .total{
   }
 }
 
+div#home_carousel {
+  overflow: hidden;
+  max-height: 450px;
+  margin-bottom: 50px;
 
+  div.carousel-inner {
+    text-align: center;
+    div.item {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
