@@ -11,4 +11,4 @@ Disallow: /user
 Disallow: /account
 Disallow: /api
 Disallow: /password
-Sitemap: https://s3.amazonaws.com/toytokri-sitemap/sitemaps/sitemap.xml.gz
+Sitemap: https://s3.amazonaws.com/kidstokri-sitemap/sitemaps/sitemap.xml.gz
