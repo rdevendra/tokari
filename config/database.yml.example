@@ -25,14 +25,14 @@ default: &default
 
 development:
   <<: *default
-  database: toy_tokri_development
-  username: toy_tokri
-  password: toytokri123
+  database: kids_tokri_development
+  username: kids_tokri
+  password: kidstokri123
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: toy_tokri
+  #username: kids_tokri
 
   # The password associated with the postgres role (username).
   #password:
@@ -60,9 +60,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: toy_tokri_test
-  username: toy_tokri
-  password: toytokri123
+  database: kids_tokri_test
+  username: kids_tokri
+  password: kidstokri123
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -84,7 +84,7 @@ test:
 #
 production:
   <<: *default
-  host: <%= ENV['TOY_TOKRI_DATABASE_HOST'] %>
-  database: <%= ENV['TOY_TOKRI_DATABASE'] %>
-  username: <%= ENV['TOY_TOKRI_DATABASE_USER'] %>
-  password: <%= ENV['TOY_TOKRI_DATABASE_PASSWORD'] %>
+  host: <%= ENV['KIDS_TOKRI_DATABASE_HOST'] %>
+  database: <%= ENV['KIDS_TOKRI_DATABASE'] %>
+  username: <%= ENV['KIDS_TOKRI_DATABASE_USER'] %>
+  password: <%= ENV['KIDS_TOKRI_DATABASE_PASSWORD'] %>
