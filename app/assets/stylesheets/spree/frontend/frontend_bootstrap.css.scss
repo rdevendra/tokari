@@ -222,7 +222,8 @@ h1, h2, h3, h4, .price, .qty, .order-qty, .total{
 
 div#home_carousel {
   overflow: hidden;
-  max-height: 450px;
+  max-height: 250px;
+  margin-top: -30px;
   margin-bottom: 50px;
 
   div.carousel-inner {
